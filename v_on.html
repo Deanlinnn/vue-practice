@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- <input type="button" value="點我拜託" v-on:click="handleClick(1,2,$event)"> -->
+        <a href="https://google.com" v-on:click.prevent="handleClick">點我</a>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            // name: 'Dean'
+        },
+        methods: {
+            handleClick: function() {
+                console.log("啥事也不會發生");
+            }
+        }
+    })
+    // document.getElementById('a').onclick = function(e){
+    //     e.preventDefault();
+    // }
+</script>
+</html>
